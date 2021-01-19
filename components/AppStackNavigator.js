@@ -1,27 +1,12 @@
-import React from 'react';
-import { createStackNavigator } from 'react-navigation-stack';
+import React from 'react'
+import {createStackNavigator} from 'react-navigation-stack'
+import ExchangeScreen from '../screens/ExchangeScreen'
+import ReceiverDetailsScreen from '../screens/ReceiverDetailsScreen'
+import MyBarterScreen from '../screens/MyBarterScreen'
 
-import BookDonateScreen from '../screens/BookDonateScreen';
-import RecieverDetailsScreen  from '../screens/RecieverDetailsScreen';
-
-
-
-
-export const AppStackNavigator = createStackNavigator({
-  BookDonateList : {
-    screen : BookDonateScreen,
-    navigationOptions:{
-      headerShown : false
-    }
-  },
-  RecieverDetails : {
-    screen : RecieverDetailsScreen,
-    navigationOptions:{
-      headerShown : false
-    }
-  }
+export const AppStackNavigator =  createStackNavigator({
+    ExchangeScreen:{screen:ExchangeScreen,navigationOptions:{headerShown:false}},
+    ReceiverDetails:{screen:ReceiverDetailsScreen,navigationOptions:{headerShown:false}},
 },
-  {
-    initialRouteName: 'BookDonateList'
-  }
-);
+{initialRouteName:'ExchnageScreen'}
+)
